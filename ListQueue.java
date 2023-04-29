@@ -14,5 +14,8 @@ public class ArrayListQueue<T> {
     }
 
     public boolean isEmpty() // This function checks, is queue empty and returns true or false
+    {
+        return queue.isEmpty();
+    }
 
 }
