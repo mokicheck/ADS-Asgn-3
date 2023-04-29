@@ -7,6 +7,10 @@ public class LinkedListStack<T> {
     public LinkedListStack()
     {
         stack = new LinkedList<T>();
+    }
+
+    public void pushMethod(T data) // This function adds an element to the top of the stack.
+    {
 
 }
 
