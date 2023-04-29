@@ -18,5 +18,8 @@ public class ArrayListQueue<T> {
         return queue.isEmpty();
     }
     public T dequeue () // This function removes and returns the front element of the queue.
+    {
+        if (isEmpty())
+        {
+            throw new NoSuchElementException();
 
-}
