@@ -6,39 +6,43 @@ public class LinkedListStack<T> {
 
     public LinkedListStack()
     {
-        stack = new LinkedList<T>();
+        stack = new LinkedList<T>;
     }
 
-    public void pushMethod(T data) // This function adds an element to the top of the stack.
+    public void push(T data) // This function adds an element to the bottom of the stack.
     {
-        stack.addFirst(data);
+        stack.addLast(data);
     }
 
-    public boolean isEmpty() // This function checks, is stack empty and returns true or false
+    public boolean isEmpty() // This function checks if the stack is empty and returns true if it is.
     {
-        return stack.isEmpty();
-    }
-
-    public void popMethod() // This function removes and returns the top element of the stack.
-    {
-        if (isEmpty())
-        {
-            throw new EmptyStackException();
+        if (stack.length() == 0) {
+            return true;
+        } else {
+            return false;
         }
-        stack.removeFirst();
     }
 
-    public T peekMethod() // This function returns the top element of the stack without removing it.
+    public void pop() // This function removes and returns the bottom element of the stack.
     {
-        if (isEmpty())
+        if (stack.isEmpty())
         {
-            throw new EmptyStackException();
+            throw new EmptyStackException;
         }
-        return stack.get(0);
+        stack.removeLast();
     }
-    public int getSize
+
+    public T peek() // This function returns the bottom element of the stack without removing it.
     {
-        return stack.size();
+        if (stack.isEmpty())
+        {
+            return null;
+        }
+        return stack.getLast();
+    }
+
+    public int size()
+    {
+        return stack.length;
     }
 }
-
