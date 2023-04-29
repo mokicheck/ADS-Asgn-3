@@ -19,19 +19,26 @@ public class LinkedListStack<T> {
         return stack.isEmpty();
     }
 
-    public void poopMethod()
+    public void popMethod() // This function removes and returns the top element of the stack.
     {
-        if (isEmty())
+        if (isEmpty())
         {
-            throw new EmptyStackExeption();
+            throw new EmptyStackException();
         }
-        stack.removeFist();
+        stack.removeFirst();
     }
 
-
-
-
-
-
+    public T peekMethod() // This function returns the top element of the stack without removing it.
+    {
+        if (isEmpty())
+        {
+            throw new EmptyStackException();
+        }
+        return stack.get(0);
+    }
+    public int getSize
+    {
+        return stack.size();
+    }
 }
 
