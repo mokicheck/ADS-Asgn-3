@@ -41,6 +41,11 @@ public class LinkedListStack<T> {
         stack.removeFirst();
     }
 
+    /*
+     Returns the top element of the stack without removing it.
+     @throws EmptyStackException if the stack is empty
+     @return the top element of the stack
+     */
     public T peekMethod() {
         if (isEmpty()) {
             throw new EmptyStackException();
@@ -48,7 +53,9 @@ public class LinkedListStack<T> {
         return stack.peek();
     }
 
-
+    /*
+     @return the number of elements in the stack
+     */
     public int getSize() {
         return stack.size();
     }
