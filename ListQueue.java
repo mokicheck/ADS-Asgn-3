@@ -16,7 +16,7 @@ public class ArrayListQueue<T> {
     public boolean isEmpty() // This function checks, is queue empty and returns true or false
     {
         return queue.isEmpty();
-        s
     }
+    public T dequeue () // This function removes and returns the front element of the queue.
 
 }
