@@ -30,14 +30,16 @@ public class LinkedListStack<T> {
         return stack.isEmpty();
     }
 
-
+    /*
+     Removes and returns the top element of the stack.
+     @throws EmptyStackException if the stack is empty
+     */
     public void popMethod() {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
         stack.removeFirst();
     }
-
 
     public T peekMethod() {
         if (isEmpty()) {
