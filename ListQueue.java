@@ -22,4 +22,8 @@ public class ArrayListQueue<T> {
         if (isEmpty())
         {
             throw new NoSuchElementException();
+        }
+        return queue.remove(0);
+    }
+
 
