@@ -14,6 +14,6 @@ public class LinkedListStack<T> {
         stack.addFirst(data);
     }
 
+    public boolean isEmpty() // This function checks, is stack empty and returns true or false
 
 }
-
