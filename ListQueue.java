@@ -8,5 +8,10 @@ public class ArrayListQueue<T> {
         queue = new ArrayList<>();
     }
 
+    public void enqueue(T data) // This function add data to the back of the queue
+    {
+        queue.add(data);
+    }
+
 
 }
