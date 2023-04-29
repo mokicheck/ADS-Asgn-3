@@ -19,6 +19,19 @@ public class LinkedListStack<T> {
         return stack.isEmpty();
     }
 
+    public void poopMethod()
+    {
+        if (isEmty())
+        {
+            throw new EmptyStackExeption();
+        }
+        stack.removeFist();
+    }
+
+
+
+
+
 
 }
 
