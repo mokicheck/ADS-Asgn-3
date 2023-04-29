@@ -26,4 +26,6 @@ public class ArrayListQueue<T> {
         return queue.remove(0);
     }
 
+    public T peek() // This function returns the front element of the queue without removing it.
 
+}
