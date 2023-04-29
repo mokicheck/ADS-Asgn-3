@@ -15,5 +15,10 @@ public class LinkedListStack<T> {
     }
 
     public boolean isEmpty() // This function checks, is stack empty and returns true or false
+    {
+        return stack.isEmpty();
+    }
+
 
 }
+
