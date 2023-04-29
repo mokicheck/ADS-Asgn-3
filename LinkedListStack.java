@@ -1,48 +1,53 @@
 import java.util.LinkedList;
 import java.util.EmptyStackException;
 
+/*
+ A stack implementation using a LinkedList.
+ @<T> the type of elements stored in the stack
+ */
 public class LinkedListStack<T> {
     private LinkedList<T> stack;
 
-    public LinkedListStack()
-    {
-        stack = new LinkedList<T>;
+    /*
+     Constructs a new empty LinkedListStack.
+     */
+    public LinkedListStack() {
+        stack = new LinkedList<T>();
     }
 
-    public void push(T data) // This function adds an element to the bottom of the stack.
-    {
-        stack.addLast(data);
+    /*
+     Adds an element to the top of the stack.
+     */
+    public void pushMethod(T data) {
+        stack.addFirst(data);
     }
 
-    public boolean isEmpty() // This function checks if the stack is empty and returns true if it is.
-    {
-        if (stack.length() == 0) {
-            return true;
-        } else {
-            return false;
+    /*
+      Checks if the stack is empty.
+      @return true if the stack is empty, false otherwise
+     */
+    public boolean isEmpty() {
+        return stack.isEmpty();
+    }
+
+
+    public void popMethod() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
         }
+        stack.removeFirst();
     }
 
-    public void pop() // This function removes and returns the bottom element of the stack.
-    {
-        if (stack.isEmpty())
-        {
-            throw new EmptyStackException;
+
+    public T peekMethod() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
         }
-        stack.removeLast();
+        return stack.peek();
     }
 
-    public T peek() // This function returns the bottom element of the stack without removing it.
-    {
-        if (stack.isEmpty())
-        {
-            return null;
-        }
-        return stack.getLast();
-    }
 
-    public int size()
-    {
-        return stack.length;
+    public int getSize() {
+        return stack.size();
     }
 }
